@@ -1,0 +1,53 @@
+
+.board {
+    width: 480px;
+    height: 480px;
+    border-style: solid;
+    position: absolute;
+    margin: 10px;
+}
+
+.square-odd {
+    width: 60px;
+    height: 60px;
+    background-color: brown;
+    display: inline-block;
+}
+
+.square-even {
+    width: 60px;
+    height: 60px;
+    background-color:darkgray;
+    display: inline-block;
+}
+
+.labelX {
+    position: absolute;
+    z-index: 2;
+    font-weight: 900;
+    color: black;
+    width: 60px;
+    display:flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center; /* Horizontal center alignment */
+}
+
+.labelY {
+    position: absolute;
+    z-index: 2;
+    font-weight: 900;
+    color: black;
+    height: 60px;
+    display:flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center; /* Horizontal center alignment */
+    
+}
+
+
+
+.board-row {
+    padding: 0;
+    margin: 0;
+    height: 60px;
+}
