@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react'
 import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
@@ -24,7 +25,6 @@ export default class App extends Component {
         });
         this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] });
     }
-
 
     render() {
         return (

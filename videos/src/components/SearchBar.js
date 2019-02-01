@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react'
 
 export default class SearchBar extends Component {
@@ -14,7 +15,12 @@ export default class SearchBar extends Component {
                 <form className="ui form" onSubmit={this.onFormSubmit}>
                     <div className="field">
                         <label>User Input</label>
-                        <input type="text" value={this.state.term} onChange={(e) => this.setState({ term: e.target.value })} />
+                        <input
+                            type="text"
+                            value={this.state.term}
+                            onChange={(e) => this.setState({ term: e.target.value })}
+                            onKeyPress={_.debounce(this.onFormSubmit, 250, { 'maxWait': 500 })}
+                        />
                     </div>
                 </form>
             </div>
